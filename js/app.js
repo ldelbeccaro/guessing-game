@@ -53,7 +53,11 @@ $(document).ready(function(){
   		 	if ( typeof guess == 'number' && guess % 1 == 0 ) {
 
   		 		// Add guess to list of guesses and display correct guess count
-  		 		$( 'ul#guessList' ).append('<li>' + guess + '</li>');
+  		 		$( 'ul#guessList' )
+  		 			.append('<li>' + guess + '</li>')
+  		 			.animate({
+	  					scrollTop: $( 'ul#guessList li:last-child' ).offset().top
+	  				}, 500);
   		 		$( 'span#count' ).text( $( 'ul#guessList' ).children().length );
 
   		 		new gaugeGuess(guess);
