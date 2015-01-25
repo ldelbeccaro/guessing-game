@@ -21,18 +21,28 @@ $(document).ready(function(){
   				$( 'h2#feedback' ).css( 'background-color', 'rgb(97, 216, 137)' );
   			}
   			else {
-  				var compare,
-  					m,
-  					abs = Math.abs(x - y);
-  				if ( abs <= 10 ) { m = 'Very hot!'; }
-  				else if ( abs <= 20 ) { m = 'Hot!'; }
-  				else if ( abs <= 30 ) { m = 'Warm...'; }
-  				else if ( abs < 50 ) { m = 'Cold.'; }
-  				else { m = 'Ice cold.'; }
+  				var compare = '',
+  					m = '',
+  					abs = Math.abs( x - y ),
+  					lastGuess = $( 'ul#guessList li:nth-last-child(2)' ).text(),
+  					absLast = Math.abs( lastGuess - y );
+
+  				if ( $( 'ul#guessList' ).children().length > 1 ) {
+  					if ( abs > absLast ) { m = 'Colder...'; }
+  					else if ( abs < absLast ) { m = 'Warmer...'; }
+  					else { m = 'Same distance.'; }
+  				}
+  				else {
+  	  				if ( abs <= 5 ) { m = 'Very hot!'; }
+	  				else if ( abs <= 10 ) { m = 'Hot!'; }
+  					else if ( abs <= 20 ) { m = 'Warm...'; }
+  					else if ( abs < 50 ) { m = 'Cold.'; }
+  					else { m = 'Ice cold.'; }					
+  				}
 
 				if ( x > y ) { compare = ' Too high.'; }
   				else if (x < y ) { compare = ' Too low.'; }
-
+  				
   				$( '#feedback' ).text( m + compare );
   			}
   		}
