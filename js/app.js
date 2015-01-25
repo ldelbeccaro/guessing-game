@@ -3,13 +3,13 @@ $(document).ready(function(){
 	
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
-    	$(".overlay").fadeIn(1000);
+    	$(".overlay").fadeIn(800);
 
   	});
 
   	/*--- Hide information modal box ---*/
   	$("a.close").click(function(){
-  		$(".overlay").fadeOut(1000);
+  		$(".overlay").fadeOut(800);
   	});
 
   	function compareTo(y) {
@@ -17,8 +17,9 @@ $(document).ready(function(){
   		// Guage closeness of guess
   		function gaugeGuess(x) {
   			if ( x == y ) {
-  				$( '#feedback' ).text( 'Yes! Click NEW GAME to play again.' );
-  				$( 'h2#feedback' ).css( 'background-color', 'rgb(97, 216, 137)' );
+  				$( 'h2#feedback' )
+  					.text( 'Yes! Click NEW GAME to play again.' )
+  					.css( 'background-color', 'rgb(97, 216, 137)' );
   			}
   			else {
   				var compare = '',
@@ -27,6 +28,7 @@ $(document).ready(function(){
   					lastGuess = $( 'ul#guessList li:nth-last-child(2)' ).text(),
   					absLast = Math.abs( lastGuess - y );
 
+  				// Guage first guess and compare subsequent guesses to the last guess
   				if ( $( 'ul#guessList' ).children().length > 1 ) {
   					if ( abs > absLast ) { m = 'Colder...'; }
   					else if ( abs < absLast ) { m = 'Warmer...'; }
@@ -75,10 +77,17 @@ $(document).ready(function(){
   	var secretNumber;
 
   	function newGame() {
+  		// Clear previous game (if any)
+  		$( 'ul#guessList' ).children().remove();
+  		$( 'span#count' ).text( $( 'ul#guessList' ).children().length );
+  		$( 'h2#feedback' )
+  			.text( 'Make your guess!' )
+  			.css( 'background-color', 'rgb(204, 50, 85)' );
+
+  		// Generate secret number
   		function randNum(min, max) {
   			return Math.floor(Math.random() * (max - min + 1)) + min;
   		}
-
   		secretNumber = randNum(1, 100);
   		console.log('New game started. Secret number: ' + secretNumber);
 
