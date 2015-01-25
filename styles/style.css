@@ -18,23 +18,16 @@
 	box-sizing: border-box;
 }
 
-html {
-	width: 100%;
-	height: 100%;
-	background-color: #394264;
-}
-
 body {
 	position: relative;
-	width: 98%;
-	height: 96%;
 	margin: 0.8em auto;
-	font-family: 'Lato', Calibri, Arial, sans-serif;
+	padding: 0 0 3.5em;
+	font-family: Calibri, 'Lato', Calibri, Helvetica Neue, Arial, sans-serif;
 	background-color: #1F253D;
 	text-align: center;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
@@ -61,6 +54,7 @@ nav {
 
 nav ul li {
 	text-transform: uppercase;
+	letter-spacing: 0.03em;
 	font-weight: 700;
 	font-size: 1.2em;
 }
@@ -81,7 +75,7 @@ nav a {
 h1 {
 	font-weight: 900;
 	font-size: 3em;
-	padding: 0.8em;
+	padding: 1.1em;
 	color: #fff;
 
 }
@@ -90,8 +84,8 @@ h1 {
 .overlay {
 	width: 100%;
 	height: 100%;
-	color: #fff;
-	background: #e74c3c;
+	color: #444;
+	background: #f5f5f5;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -101,8 +95,8 @@ h1 {
 }
 
 .content {
-	color: #fff;
-	background: #e74c3c;
+	color: #444;
+	background: #f5f5f5;
 	position: relative;
 	height: auto;
 	width: 600px;
@@ -170,42 +164,11 @@ h1 {
 .game {
 	position: relative;
 	background-color: #394264;
-	width: 380px;
-	height: 380px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	width: 23em;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
 	margin: 0 auto;
-
-	box-shadow: rgb(26, 31, 52) 1px 1px,
-    rgb(26, 31, 52) 2px 2px,
-    rgb(26, 31, 52) 3px 3px,
-    rgb(26, 31, 53) 4px 4px,
-    rgb(26, 32, 53) 5px 5px,
-    rgb(27, 32, 53) 6px 6px,
-    rgb(27, 32, 54) 7px 7px,
-    rgb(27, 32, 54) 8px 8px,
-    rgb(27, 32, 54) 9px 9px,
-    rgb(27, 33, 55) 10px 10px,
-    rgb(27, 33, 55) 11px 11px,
-    rgb(28, 33, 55) 12px 12px,
-    rgb(28, 33, 56) 13px 13px,
-    rgb(28, 34, 56) 14px 14px,
-    rgb(28, 34, 56) 15px 15px,
-    rgb(28, 34, 57) 16px 16px,
-    rgb(29, 34, 57) 17px 17px,
-    rgb(29, 34, 57) 18px 18px,
-    rgb(29, 35, 58) 19px 19px,
-    rgb(29, 35, 58) 20px 20px,
-    rgb(29, 35, 58) 21px 21px,
-    rgb(29, 35, 59) 22px 22px,
-    rgb(30, 35, 59) 23px 23px,
-    rgb(30, 36, 59) 24px 24px,
-    rgb(30, 36, 60) 25px 25px,
-    rgb(30, 36, 60) 26px 26px,
-    rgb(30, 36, 60) 27px 27px,
-    rgb(31, 37, 61) 28px 28px;
-
 }
 
 h2 {
@@ -216,64 +179,66 @@ h2 {
 	font-weight: 400;
 	display: block;
 	line-height: 1em;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
 	color: #fff;
 }
 
 .game p {
-	margin-top: 0.5em;
-	font-size: 1.8em;
-	padding-bottom: 0.5em;
+	margin: 0.5em 0;
+	font-size: 1.5em;
+	padding: 0.2em;
 }
 
 #count {
-	color: #f39c12;
+	color: #cc3255;
 	font-weight: 700;
-	font-size: 1.5em;
+	font-size: 1.1em;
 }
 
 input {
-	width: 300px;
-	height: 50px;
+	width: 75%;
+	height: 1.8em;
 	display: block;
 	padding: 0.8em 0;
-	margin: 0.8em auto 0;
+	margin: 1em auto 0;
 	background: #50597b;
 	color: #fff;
 	border: solid 1px #1f253d;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	font-family: Calibri;
 }
 
 input.button {
 	background: #1F253D;
 	color: #95a5a6;
-	font-size: 2em;
+	font-size: 1.5em;
 	padding: 0.2em;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
+	margin-top: 0.7em;
+	-webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	-moz-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	-ms-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	-o-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	transition: background 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 input.button:hover {
-	background: #e64c65;
-	color: #fff;
-	-webkit-transition: background 1s ease-in-out;
-	-moz-transition: background 1s ease-in-out;
-	-ms-transition: background 1s ease-in-out;
-	-o-transition: background 1s ease-in-out;
-	transition: background 1s ease-in-out;
+	background: #282f4e;
+	color: #f5f5f5;
+	-webkit-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	-moz-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	-ms-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	-o-transition: background 300ms ease-in-out, color 300ms ease-in-out;
+	transition: background 300ms ease-in-out, color 300ms ease-in-out;
 	cursor: pointer;
 }
 
 input.text {
 	text-align: center;
 	padding: 0.2em;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 input:focus {
@@ -281,41 +246,37 @@ input:focus {
 }
 
 ::-webkit-input-placeholder {
-   color: #95a5a6;
+   color: #eaeaea;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #95a5a6;
+   color: #eaeaea;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #95a5a6; 
+   color: #eaeaea; 
 }
 
 :-ms-input-placeholder {  
-   color: #95a5a6; 
+   color: #eaeaea; 
 }
 
 ul.guessBox {
-	height: 80px;
+	height: 4.5em;
 	margin: 10px auto 0;
-	background: #11a8ab;
-	padding: 0.5em;
-	display: block;
+	background: #32a2cc;
+	padding: 0.3em;
 	line-height: 2em;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
 	color: #fff;
 	overflow: auto;
 }
 ul.guessBox li {
-	display: inline;
-	background-color: #1a4e95;
-	padding: 0.3em;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	width: 95%;
-	margin: 0.2em;
+	float: left;
+	padding: 0 0.3em;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
 	color: #fff;
 }

@@ -2,14 +2,13 @@
 <html lang="en">
 	<head>
 
-		<title>Hot || Cold</title>
+		<title>HOT or COLD</title>
 
 		<!-- Meta Tags -->
 		<meta charset="utf-8"/>
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="styles/reset.css">
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles/style.css"/> 
 
 		<!-- JavaScript -->
@@ -24,8 +23,8 @@
 			<!-- Top Navigation -->
 			<nav> 
 				<ul class="clearfix">
-					<li><a class="what" href="#">What ?</a></li>
-					<li><a class="new" href="#">+ New Game</a></li>
+					<li><a class="what" href="#">Instructions</a></li>
+					<li><a class="new" href="#">New Game</a></li>
 				</ul>
 			</nav>
 			
@@ -34,9 +33,9 @@
 				<div class="content">
 					<h3>What do I do?</h3>
 					<div>
-						<p>This is a Hot or Cold Number Guessing Game. The game goes like this: </p>
+						<p>This is a HOT or COLD number guessing game. The game works as follows: </p>
 						<ul>
-							<li>1. I pick a <strong>random secret number</strong> between 1 to 100 and keep it hidden.</li>
+							<li>1. I pick a random <strong>secret number</strong> between 1 and 100.</li>
 							<li>2. You need to <strong>guess</strong> until you can find the hidden secret number.</li>
 							<li>3. You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
 						</ul>
@@ -53,14 +52,14 @@
 
 		<section class="game"> <!-- Guessing Section -->
 			
-			<h2 id="feedback">Make your Guess!</h2>
+			<h2 id="feedback">Make your guess!</h2>
 
 			<form>
-				<input type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="Enter your Guess" required/>
+				<input type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="Enter guess" required/>
       			<input type="submit" id="guessButton" class="button" name="submit" value="Guess"/>
 			</form>
 			
-      		<p>Guess #<span id="count">0</span>!</p>
+      		<p>Guess #<span id="count">0</span></p>
 			
 			<ul id="guessList" class="guessBox clearfix">
 
