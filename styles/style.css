@@ -22,8 +22,8 @@ body {
 	position: relative;
 	margin: 0.8em auto;
 	padding: 0 0 3.5em;
-	font-family: Calibri, 'Lato', Calibri, Helvetica Neue, Arial, sans-serif;
-	background-color: #1F253D;
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+	background-color: #f9f9f9;
 	text-align: center;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -31,6 +31,7 @@ body {
 	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	color: #444;
 }
 
 a {
@@ -69,14 +70,14 @@ nav ul li:last-child {
 
 nav a {
 
-	color: #fff;
+	color: #444;
 }
 
 h1 {
 	font-weight: 900;
 	font-size: 3em;
 	padding: 1.1em;
-	color: #fff;
+	color: #444;
 
 }
 
@@ -163,7 +164,7 @@ h1 {
 
 .game {
 	position: relative;
-	background-color: #394264;
+	background-color: #ddd;
 	width: 23em;
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
@@ -181,7 +182,7 @@ h2 {
 	line-height: 1em;
 	border-top-left-radius: 1px;
 	border-top-right-radius: 1px;
-	color: #fff;
+	color: #444;
 }
 
 .game p {
@@ -202,18 +203,33 @@ input {
 	display: block;
 	padding: 0.8em 0;
 	margin: 1em auto 0;
-	background: #50597b;
-	color: #fff;
-	border: solid 1px #1f253d;
+	background: #ddd;
+	color: #444;
+	border: solid 1px #444;
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	border-radius: 1px;
-	font-family: Calibri;
+	font-family: 'Roboto';
+}
+input::-webkit-input-placeholder {
+   color: #888;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+   color: #888;  
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: #888;
+}
+
+input:-ms-input-placeholder {  
+   color: #888;  
 }
 
 input.button {
 	background: #1F253D;
-	color: #95a5a6;
+	color: #eee;
 	font-size: 1.5em;
 	padding: 0.2em;
 	margin-top: 0.7em;
